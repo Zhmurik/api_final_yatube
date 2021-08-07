@@ -1,12 +1,9 @@
-from django.db.migrations import serializer
+from django.shortcuts import get_object_or_404
+from posts.models import Post, Follow, Group
 from rest_framework import viewsets, filters, mixins
 from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.viewsets import ModelViewSet
 
-from django.shortcuts import get_object_or_404
-
-from posts.models import Post, Follow, Comment, Group
 from .permissions import AuthorOrReadOnly
 from .serializers import (
     PostSerializer,
