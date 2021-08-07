@@ -19,7 +19,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     # 'rest_framework.authtoken',
-    'djoser',
+    # 'djoser',
     'api',
     'posts',
     'django_filters',
@@ -102,5 +102,4 @@ REST_FRAMEWORK = {
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=30),
-    # 'AUTH_HEADER_TYPES': ('Bearer',),
 }

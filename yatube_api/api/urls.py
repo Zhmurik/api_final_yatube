@@ -1,5 +1,4 @@
 from rest_framework.routers import DefaultRouter
-from rest_framework import routers
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView
@@ -32,7 +31,4 @@ urlpatterns = [
         name='token_refresh'
     ),
     path('v1/', include(router.urls)),
-    path('auth/', include('djoser.urls')),
-    # JWT-эндпоинты, для управления JWT-токенами:
-    path('auth/', include('djoser.urls.jwt')),
 ]
