@@ -80,7 +80,7 @@ class Follow(models.Model):
     )
 
     class Meta:
-        ordering = ['following']
+        ordering = ['user', 'following']
         constraints = (
             models.CheckConstraint(
                 name='prevent_self_follow',
